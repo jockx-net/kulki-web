@@ -2,21 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kulki</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&display=swap" rel="stylesheet">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+        :root {
+            --badge-height: 44px;
+            --page-padding: 2rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: var(--page-padding);
+            font-family: system-ui, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: "Unbounded", "Century Gothic", "Franklin Gothic Medium", "Arial Black", sans-serif;
+            font-weight: 600;
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            line-height: 1.2;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+
+        .actions {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .action-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .badge-slot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: var(--badge-height);
+        }
+
+        .flathub-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: var(--badge-height);
+            line-height: 0;
+        }
+
+        .flathub-link img {
+            display: block;
+            height: var(--badge-height);
+            width: auto;
+        }
+
+        .github-buttons {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        }
+
+        .github-buttons .badge-slot {
+            min-height: 28px;
+        }
+
+        .screenshot {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+    </style>
 </head>
 <body>
-<h1>Kulki wiecznie żywe</h1>
+<div class="page">
+    <h1>Kulki wiecznie żywe</h1>
 
-<div>
-    <a class="github-button" href="https://github.com/jockx-net/kulki" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" aria-label="Star jockx-net/kulki on GitHub">Star</a>
-    <a class="github-button" href="https://github.com/jockx-net/kulki/releases/tag/v1.1.1" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" aria-label="Download jockx-net/kulki on GitHub">Download</a>
-    <a href='https://flathub.org/apps/net.jockx.Kulki'><img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
-  </a>
-    
+    <div class="actions">
+        <div class="action-row">
+            <div class="badge-slot">
+                <a class="flathub-link" href="https://flathub.org/apps/net.jockx.Kulki">
+                    <img alt="Get it on Flathub" src="https://flathub.org/api/badge?locale=en">
+                </a>
+            </div>
+        </div>
+
+        <div class="github-buttons">
+            <div class="badge-slot">
+                <a class="github-button"
+                   href="https://github.com/jockx-net/kulki"
+                   data-color-scheme="no-preference: light; light: light; dark: light;"
+                   data-size="large"
+                   aria-label="Star jockx-net/kulki on GitHub">Star</a>
+            </div>
+            <div class="badge-slot">
+                <a class="github-button"
+                   href="https://github.com/jockx-net/kulki/releases/tag/v1.1.1"
+                   data-color-scheme="no-preference: light; light: light; dark: light;"
+                   data-size="large"
+                   aria-label="Download jockx-net/kulki">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <img class="screenshot" src="img/screenshot.png" alt="Kulki screenshot">
 </div>
-
-<img src="img/screenshot.png">
 </body>
 </html>
